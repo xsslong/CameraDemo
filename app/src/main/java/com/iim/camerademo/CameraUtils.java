@@ -131,6 +131,7 @@ public class CameraUtils {
      */
     public static void releaseCamera() {
         if (mCamera != null) {
+            mCamera.setPreviewCallback(null);
             mCamera.stopPreview();
             mCamera.release();
             mCamera = null;
